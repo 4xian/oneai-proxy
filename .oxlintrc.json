@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "react", "typescript", "jsx-a11y"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true
+  },
+  "settings": {
+    "react": {
+      "version": "19.2.8"
+    }
+  },
+  "rules": {
+    "no-console": "off",
+    "no-debugger": "error",
+    "no-constant-condition": "error",
+    "no-duplicate-imports": "error",
+    "no-unreachable": "error",
+    "no-unused-vars": "error",
+    "typescript/no-explicit-any": "warn",
+    "typescript/no-non-null-assertion": "off",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-undef": "error",
+    "react/self-closing-comp": "error",
+    "react/set-state-in-effect": "off",
+    "jsx-a11y/alt-text": "warn",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/prefer-tag-over-role": "off"
+  }
+}

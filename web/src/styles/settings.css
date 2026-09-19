@@ -1,0 +1,540 @@
+.settings-panel {
+  padding: 34px 0 72px;
+}
+
+.settings-workspace {
+  display: flex;
+  align-items: flex-start;
+  min-height: 620px;
+  padding-top: 28px;
+}
+
+.settings-sidebar {
+  position: sticky;
+  top: 94px;
+  width: 220px;
+  flex: 0 0 220px;
+  margin-right: 28px;
+  padding: 18px 12px;
+  border: 1px solid var(--apple-card-border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--apple-card-shadow);
+}
+
+.settings-sidebar-title {
+  margin: 0 10px 12px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.settings-side-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-side-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  margin-bottom: 4px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.settings-side-nav a:hover {
+  background: rgba(120, 120, 128, 0.09);
+  transform: translateX(2px);
+}
+
+.settings-side-nav a.active {
+  color: var(--apple-blue);
+  background: var(--apple-focus-ring);
+}
+
+.settings-side-nav .semi-icon {
+  width: 18px;
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.settings-route-content {
+  min-width: 0;
+  flex: 1 1 auto;
+  will-change: opacity, transform;
+}
+
+.settings-route-content > [hidden] {
+  display: none;
+}
+
+.mapping-settings-section .mapping-editors {
+  display: flex;
+  min-height: 430px;
+  margin: 14px -10px 0 0;
+}
+
+.mapping-settings-section .mapping-editor-card {
+  min-width: 0;
+  flex: 1 1 50%;
+  margin: 0 10px 0 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--apple-control-surface) !important;
+}
+
+.mapping-settings-section .mapping-editor-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.mapping-settings-section .mapping-editor-heading > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.mapping-settings-section .mapping-editor-heading strong {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.mapping-settings-section .mapping-editor-heading span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mapping-settings-section .mapping-textarea {
+  width: 100%;
+  min-height: 350px;
+  resize: vertical;
+  font-family: 'SF Mono', 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.settings-route-up {
+  animation: settings-route-up 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.settings-route-down {
+  animation: settings-route-down 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes settings-route-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes settings-route-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.settings-panel {
+  padding-bottom: 38px;
+}
+
+.settings-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.runtime-settings-group {
+  min-width: 0;
+  flex: 1 1 100%;
+}
+
+.runtime-policy-group {
+  margin-top: 4px;
+  padding-top: 18px;
+  border-top: 1px solid var(--apple-line);
+}
+
+.runtime-settings-heading {
+  margin-bottom: 14px;
+}
+
+.runtime-settings-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.runtime-settings-heading p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.runtime-settings-fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.channel-settings-form {
+  align-items: center;
+}
+.channel-effort-field {
+  flex: 0 1 280px;
+}
+.channel-effort-field small,
+.channel-setting-switch small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.channel-setting-switch {
+  display: flex;
+  flex: 1 1 360px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  margin: 0 14px 14px 0;
+  padding: 10px 14px;
+  border: 1px solid var(--apple-control-border);
+  border-radius: var(--apple-radius-control);
+  background: var(--apple-control-surface);
+}
+.channel-setting-switch > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  margin-right: 16px;
+}
+.channel-setting-switch strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+.channel-setting-switch .semi-switch {
+  flex: 0 0 auto;
+}
+
+.runtime-timeout-field {
+  flex-basis: 220px;
+}
+
+.runtime-timeout-field small {
+  margin: 6px 2px 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.max-attempts-field {
+  flex-basis: 320px;
+}
+
+.max-attempts-field small {
+  margin: 6px 2px 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.auth-form {
+  align-items: flex-end;
+}
+.auth-token-field {
+  flex: 1 1 420px;
+}
+.token-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.token-actions .semi-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.data-actions,
+.data-import {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  margin-bottom: 14px;
+}
+.data-field {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 280px;
+  flex-direction: column;
+  margin: 0 10px 0 0;
+}
+.data-field > span,
+.data-password > span {
+  display: block;
+  margin: 0 0 8px 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.data-row-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  margin-bottom: 0;
+  overflow-x: auto;
+}
+.data-row-actions .semi-button {
+  margin: 0 0 0 10px;
+}
+.data-row-actions .semi-button:first-child {
+  margin-left: 0;
+}
+.file-picker-control {
+  display: flex;
+  align-items: center;
+}
+.file-picker-control .semi-input-wrapper {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.file-picker-button {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  min-height: 32px;
+  margin: 0 0 0 10px;
+  padding: 0 12px;
+  overflow: hidden;
+  border: 1px solid var(--apple-control-border);
+  border-radius: var(--apple-radius-control);
+  background: transparent;
+  color: var(--apple-ink);
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.file-picker-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 0;
+}
+.migration-workflow {
+  margin-bottom: 14px;
+  padding: 18px;
+  border: 1px solid var(--apple-card-border);
+  border-radius: var(--apple-radius-card);
+  background: var(--surface);
+  box-shadow: var(--apple-card-shadow);
+}
+.migration-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.migration-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  letter-spacing: 0;
+}
+.migration-heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.migration-controls {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  margin-bottom: 14px;
+}
+.migration-controls:last-of-type {
+  margin-bottom: 0;
+}
+.migration-file-row {
+  padding-top: 2px;
+}
+.migration-preview {
+  margin-top: 2px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.migration-counts,
+.migration-channel-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.migration-counts span {
+  margin: 0 18px 8px 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+.migration-preview > p {
+  margin: 4px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.migration-channel-list span {
+  margin: 0 8px 8px 0;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: var(--apple-control-surface);
+  color: var(--ink);
+  font-size: 12px;
+}
+.migration-restart-state {
+  display: flex;
+  align-items: center;
+  margin: 4px 0 0;
+  color: var(--apple-green);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.migration-restart-state .semi-icon {
+  flex: 0 0 auto;
+  margin-right: 8px;
+}
+.data-password {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 280px;
+  flex-direction: column;
+  margin: 0 10px 0 0;
+}
+.data-password .semi-input-wrapper {
+  width: 100%;
+}
+
+.settings-page .settings-section {
+  padding: 30px 0 24px;
+}
+.settings-page .settings-section:first-of-type {
+  padding-top: 30px;
+}
+.settings-page .settings-form {
+  padding: 18px;
+  border: 1px solid var(--apple-card-border);
+  border-radius: var(--apple-radius-card);
+  background: var(--surface);
+  box-shadow: var(--apple-card-shadow);
+}
+.settings-page .auth-settings-section .settings-form + .settings-form {
+  margin-top: 10px;
+}
+.settings-page .token-actions {
+  margin-top: 12px;
+}
+.settings-page .data-actions,
+.settings-page .data-import {
+  padding: 16px;
+  border: 1px solid var(--apple-card-border);
+  border-radius: var(--apple-radius-card);
+  background: var(--surface);
+  box-shadow: var(--apple-card-shadow);
+}
+.settings-page .data-import + .data-import {
+  margin-top: 10px;
+}
+.settings-page .data-actions .data-row-actions .semi-button,
+.settings-page .data-import .data-row-actions .semi-button,
+.settings-page .migration-controls .data-row-actions .semi-button {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .settings-workspace {
+    display: block;
+    padding-top: 20px;
+  }
+  .settings-sidebar {
+    position: static;
+    width: 100%;
+    margin: 0 0 14px;
+    padding: 10px;
+  }
+  .settings-side-nav {
+    flex-flow: row wrap;
+  }
+  .settings-side-nav a {
+    min-height: 38px;
+    margin: 0 4px 4px 0;
+  }
+  .settings-sidebar-title {
+    margin-bottom: 8px;
+  }
+  .mapping-settings-section .mapping-editors {
+    display: block;
+    min-height: 0;
+  }
+  .mapping-settings-section .mapping-editor-card {
+    min-height: 220px;
+    margin: 0 0 10px;
+  }
+  .mapping-settings-section .mapping-textarea {
+    min-height: 160px;
+  }
+  .settings-panel {
+    padding-bottom: 54px;
+  }
+  .label {
+    margin-bottom: 26px;
+  }
+  .settings-page .settings-form,
+  .settings-page .data-actions,
+  .settings-page .data-import,
+  .settings-page .migration-workflow {
+    padding: 14px;
+  }
+  .data-row-actions {
+    flex-wrap: nowrap;
+  }
+  .file-picker-control {
+    min-width: 0;
+    width: auto;
+    flex: 1 1 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-route-up,
+  .settings-route-down {
+    animation: none;
+  }
+}
